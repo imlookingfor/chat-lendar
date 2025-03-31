@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-import OPENAI_API_KEY from "./env";
+import { OPENAI_API_KEY } from "./env";
 import ChatContext from "./context/ChatContext";
 import Calendar from "./components/Calendar";
 import ChatList from "./components/ChatList";
