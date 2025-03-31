@@ -1,0 +1,146 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #fdfaf6;
+}
+
+/* 공통 */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  background-color: #f5f8ff;
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: background 0.2s ease;
+}
+
+li:hover {
+  background-color: #eaf2fd;
+}
+
+button {
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  margin-left: 6px;
+  background-color: #cfe4ff;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  transition: background 0.2s ease, transform 0.1s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a9d0ff;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button.delete {
+  background-color: #ffdede;
+  color: #a22;
+}
+
+button.delete:hover {
+  background-color: #fbb;
+}
+
+.main-container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 80px;
+  gap: 5rem;
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 좌측 채팅 리스트 */
+.chatlist-area {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  background-color: #f8f9fb;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow-y: auto;
+  min-height: 400px;
+}
+
+/* 우측 캘린더 */
+.calendar-area {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: visible;
+  min-height: 400px;
+}
+
+/* Quick Chat */
+.direct-msg-area {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+  z-index: 100;
+  overflow: visible;
+  min-width: 600px;
+}
+
+.direct-msg-input {
+  width: 100%;
+  max-width: 800px;
+  padding: 1.2rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* 채팅창 전체 화면 아이콘 */
+.go-chat-area {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 200;
+}
+
+.go-chat-app {
+  background-color: #a1c4fd;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 2rem 2.2rem;
+  font-size: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.go-chat-app:hover {
+  background-color: #7ab1f5;
+}
